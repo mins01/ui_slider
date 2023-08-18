@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ko" >
+<head>
+	<title>UI slider</title>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Script-Type" content="text/javascript">
+	<meta http-equiv="Content-Style-Type" content="text/css">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="shortcut icon" href="http://www.mins01.com/favicon.ico">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<script src="/js/ForGoogle.js"></script>
+	<!-- google analytics -->
+	<script>if(window.ForGoogle){ ForGoogle.analytics() }else{ console.log("failure : ForGoogle.analytics()");}</script>
+	
+
+	<!-- jquery 관련 -->
+	<!-- <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script> -->
+
+	<!-- 부트스트랩 4 : IE8지원안됨! -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous"> 
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" crossorigin="anonymous"></script>  -->
+	<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script> -->
+	<!-- vue.js -->
+	<!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+	
+	<!-- meta og -->
+	
+	<meta property="og:title" content="UI slider">
+	<meta property="og:description" content="UI slider">
+	<meta name="og:image" content="http://www.mins01.com/img/logo.gif">
+	<meta property="og:image:width" content="190">
+	<meta property="og:image:height" content="70" />
+	<meta property="og:site_name" content="UI slider" />
+	<meta property="og:type" content="website">
+	
+	<!-- //meta og -->
+	
+    <link rel="stylesheet" href="slider.css">
+    <script src="Slider.js"></script>
+    <style>
+        .content{
+            outline: 1px dotted #000; outline-offset: -1px;
+            width:200px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load',()=>{
+            globalThis.slider_1 = new Slider(document.querySelector('#slider-1'));
+        })
+    </script>
+	
+</head>
+<body>
+	<div class="container">
+        <h1>UI slider</h1>
+        <ul class="list-group">
+            <li class="list-group-item">목표 : 최신 기능을 사용한 단순 슬라이더를 만든다.</li>
+        </ul>
+        <div>
+            <div class="m-5">
+                <div class="slider" id="slider-1" data-slider-direction="left" style="width:300px;height:100px;">
+                    <div class="slider-item-container">
+                        <div class="slider-item">
+                            <div class="content">콘텐츠1</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠2</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠3</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠4</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠5</div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination-container">
+                        <div class="slider-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-info" onclick="slider_1.next()">slider_1.next()</button>
+            <hr>
+            <div class="m-5">
+                <div class="slider" id="slider-2" data-slider-direction="right" style="width:300px;height:100px;">
+                    <div class="slider-item-container">
+                        <div class="slider-item">
+                            <div class="content">콘텐츠1</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠2</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠3</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠4</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠5</div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination-container">
+                        <div class="slider-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="m-5">
+                <div class="slider" id="slider-3" data-slider-direction="top" style="width:300px;height:100px;">
+                    <div class="slider-item-container">
+                        <div class="slider-item">
+                            <div class="content">콘텐츠1</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠2</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠3</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠4</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠5</div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination-container">
+                        <div class="slider-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="m-5">
+                <div class="slider" id="slider-4" data-slider-direction="bottom" style="width:300px;height:100px;">
+                    <div class="slider-item-container">
+                        <div class="slider-item">
+                            <div class="content">콘텐츠1</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠2</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠3</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠4</div>
+                        </div>
+                        <div class="slider-item">
+                            <div class="content">콘텐츠5</div>
+                        </div>
+                    </div>
+                    <div class="slider-pagination-container">
+                        <div class="slider-pagination"></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+	</div>
+    
+</body>
+</html>
